@@ -14,9 +14,7 @@ pipeline{
 		}
 // steps
 def buildApp() {
-	dir (‘section_4/code/cd_pipeline’){
-		def appImage = docker.build(“hands-on-jenkins/yourapp : ${BUILD_NUMBER}")
-		}}
+	dir (‘section_4/code/cd_pipeline’){def appImage = docker.build(“hands-on-jenkins/yourapp : ${BUILD_NUMBER}")}}
 def deploy(environment){
 	def containerName = ‘ ‘
 	def port = ‘ ‘
